@@ -1,0 +1,10 @@
+# Environment files
+.env
+
+# Data
+Data/
+
+# Anaconda Environment
+.ipynb_checkpoints/
+.virtual_documents/
+anaconda_projects/
