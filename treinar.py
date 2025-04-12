@@ -1,9 +1,15 @@
-import openai
+from openai import OpenAI
+from dotenv import load_dotenv
+import os
 
-client = openai.OpenAI(api_key="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")
+load_dotenv(override=True)
+api_key = os.getenv('OPENAI_API_KEY')
+client = OpenAI(api_key)
+
+path_data = os.path.join("Data")
 
 file = client.files.create(
-    file=open("fine_tuning_data.jsonl", "rb"),
+    file=open(f"{path_data}\\fine_tuning_data.jsonl", "rb"),
     purpose="fine-tune"
 )
 
