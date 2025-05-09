@@ -8,3 +8,6 @@ Data/
 .ipynb_checkpoints/
 .virtual_documents/
 anaconda_projects/
+
+#json files
+*.json
